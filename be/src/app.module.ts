@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import * as dotenv from 'dotenv';
+import {NoteModule} from "./note/note/note.module";
 
 dotenv.config();
 
@@ -16,7 +17,9 @@ dotenv.config();
     database: process.env.DB_DATABASE,
     entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true, // Не используйте в продакшене
-  }),],
+  }),
+    NoteModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
