@@ -17,3 +17,6 @@ coverage/
 
 # Прочие специфичные файлы
 *.tsbuildinfo
+
+# env
+.env
