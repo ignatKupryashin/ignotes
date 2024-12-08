@@ -1,0 +1,40 @@
+# Игнорирование системных файлов и папок
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Логи
+*.log
+
+# Артефакты сборки
+dist/
+build/
+coverage/
+
+# Папки, связанные с редакторами
+.idea/
+.vscode/
+
+# Исключение других IDE/редакторов (например, Eclipse)
+.project
+.classpath
+.settings/
+
+# Файлы временных и кэшированных данных
+*.swp
+*.swo
+*.sublime-workspace
+
+# Для monorepo, если используете какие-либо вспомогательные инструменты, например:
+lerna-debug.log
+lerna.json
+
+# Прочие временные файлы
+*.tmp
+*.bak
