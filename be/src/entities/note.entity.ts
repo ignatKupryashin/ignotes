@@ -6,6 +6,9 @@ export class Note {
     id: number;
 
     @Column()
+    userId: number;
+
+    @Column()
     title: string;
 
     @Column('text')

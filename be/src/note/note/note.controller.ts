@@ -1,6 +1,7 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {NoteService} from "./note.service";
-import {ApiOperation, ApiTags} from "@nestjs/swagger";
+import {ApiBody, ApiOperation, ApiTags} from "@nestjs/swagger";
+import {CreateNoteDto} from "./dto/create-note.dto";
 
 @ApiTags('Notes')
 @Controller('note')
@@ -11,8 +12,9 @@ export class NoteController {
 
     @Post()
     @ApiOperation({summary: 'Create note'})
-    create(@Body() body: { title: string; content: string }) {
-        return this.noteService.create(body.title, body.content);
+    @ApiBody({type: CreateNoteDto})
+    create(@Body() body: CreateNoteDto) {
+        return this.noteService.create(1, body.title, body.content);
     }
 
     @Get()

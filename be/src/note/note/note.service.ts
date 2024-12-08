@@ -10,8 +10,8 @@ export class NoteService {
         private readonly notebookRepository: Repository<Note>,
     ) {}
 
-    create(title: string, content: string) {
-        const notebook = this.notebookRepository.create({ title, content });
+    create(userId: number, title: string, content: string) {
+        const notebook = this.notebookRepository.create({ userId, title, content });
         return this.notebookRepository.save(notebook);
     }
 
