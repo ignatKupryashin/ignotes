@@ -1,10 +1,10 @@
-import Counter from "./features/counter/Counter.tsx";
+import NoteList from "./features/components/NoteList.tsx";
 
 const App = () => {
 
 
     return (
-      <Counter/>
+      <NoteList/>
     );
 };
 
